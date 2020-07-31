@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-4">
+  <div class="col mb-4" *ngFor="let product of products">
+    <div *ngIf="product.accountInformation.bank == 'BANCO_1'" class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id}}</h6>
+        <p class="card-text" *ngIf="product.typeAccount == 'CURRENT_ACCOUNT' || product.typeAccount == 'DEPOSIT_ACCOUNT'">
+          Saldo disponible: {{product.productAccountBalances.saldo_disponible.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
