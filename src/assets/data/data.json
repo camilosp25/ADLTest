@@ -1,4 +1,85 @@
 [
+
+  {
+    "accountInformation": {
+      "accountIdentifier": "4544769920667610",
+      "productType": "CREDIT_CARD",
+      "bank": "BANCO_2"
+    },
+
+    "locked": true,
+    "id": "4544769920667610",
+    "typeAccount": "CREDIT_CARD",
+    "dueDate": "2019-12-26T00: 00: 00",
+    "productAccountBalances": {
+      "pago_total_pesos": {
+        "amount": -126012.54,
+        "currencyCode": "COP"
+      },
+      "cupo_disponible_avances_pesos": {
+        "amount": 35000000,
+        "currencyCode": "COP"
+      },
+      "saldo_mora_pesos": {
+        "amount": 0.38,
+        "currencyCode": "COP"
+      },
+      "saldo_actual": {
+        "amount": -126012.54,
+        "currencyCode": "COP"
+      },
+      "cupo_disponible_compras_pesos": {
+        "amount": 35000000,
+        "currencyCode": "COP"
+      },
+      "valor_pago_minimo": {
+        "amount": 0.38,
+        "currencyCode": "COP"
+      },
+      "cupo_total": {
+        "amount": 35000000,
+        "currencyCode": "COP"
+      }
+    },
+    "capacity": 100
+  },
+  {
+    "accountInformation": {
+      "accountIdentifier": "220080820012",
+      "productType": "DEPOSIT_ACCOUNT",
+      "currencyCode": "COP",
+      "bank": "BANCO_1"
+    },
+    "locked": true,
+    "id": "220080820012",
+    "typeAccount": "DEPOSIT_ACCOUNT",
+    "status": "ACTIVE",
+    "dueDate": "2019-12-03T10: 32: 42.657",
+    "lastTransactionDate": "2019-12-03T10: 32: 42.44",
+    "productAccountBalances": {
+      "saldo_canje": {
+        "amount": 0
+      },
+      "saldo_disponible": {
+        "amount": 451642036.35
+      },
+      "saldo_canje_48_horas": {
+        "amount": 0
+      },
+      "saldo_canje_72_horas": {
+        "amount": 0
+      },
+      "saldo_canje_24_horas": {
+        "amount": 0
+      },
+      "saldo_ayer": {
+        "amount": 451707036.35
+      },
+      "saldo_actual": {
+        "amount": 451707036.35
+      }
+    }
+  },
   {
     "accountInformation": {
       "accountIdentifier": "3001101234845",
@@ -183,49 +264,6 @@
     "locked": true,
     "id": "1315000180",
     "typeAccount": "CREDIT"
-  },
-  {
-    "accountInformation": {
-      "accountIdentifier": "4544769920667610",
-      "productType": "CREDIT_CARD",
-      "bank": "BANCO_2"
-    },
-
-    "locked": true,
-    "id": "4544769920667610",
-    "typeAccount": "CREDIT_CARD",
-    "dueDate": "2019-12-26T00: 00: 00",
-    "productAccountBalances": {
-      "pago_total_pesos": {
-        "amount": -126012.54,
-        "currencyCode": "COP"
-      },
-      "cupo_disponible_avances_pesos": {
-        "amount": 35000000,
-        "currencyCode": "COP"
-      },
-      "saldo_mora_pesos": {
-        "amount": 0.38,
-        "currencyCode": "COP"
-      },
-      "saldo_actual": {
-        "amount": -126012.54,
-        "currencyCode": "COP"
-      },
-      "cupo_disponible_compras_pesos": {
-        "amount": 35000000,
-        "currencyCode": "COP"
-      },
-      "valor_pago_minimo": {
-        "amount": 0.38,
-        "currencyCode": "COP"
-      },
-      "cupo_total": {
-        "amount": 35000000,
-        "currencyCode": "COP"
-      }
-    },
-    "capacity": 100
   },
   {
     "accountInformation": {
@@ -425,43 +463,6 @@
       },
       "saldo_actual": {
         "amount": 7102332.67
-      }
-    }
-  },
-  {
-    "accountInformation": {
-      "accountIdentifier": "220080820012",
-      "productType": "DEPOSIT_ACCOUNT",
-      "currencyCode": "COP",
-      "bank": "BANCO_1"
-    },
-    "locked": true,
-    "id": "220080820012",
-    "typeAccount": "DEPOSIT_ACCOUNT",
-    "status": "ACTIVE",
-    "dueDate": "2019-12-03T10: 32: 42.657",
-    "lastTransactionDate": "2019-12-03T10: 32: 42.44",
-    "productAccountBalances": {
-      "saldo_canje": {
-        "amount": 0
-      },
-      "saldo_disponible": {
-        "amount": 451642036.35
-      },
-      "saldo_canje_48_horas": {
-        "amount": 0
-      },
-      "saldo_canje_72_horas": {
-        "amount": 0
-      },
-      "saldo_canje_24_horas": {
-        "amount": 0
-      },
-      "saldo_ayer": {
-        "amount": 451707036.35
-      },
-      "saldo_actual": {
-        "amount": 451707036.35
       }
     }
   },
