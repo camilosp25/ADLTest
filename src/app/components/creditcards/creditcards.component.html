@@ -1,7 +1,11 @@
 <div class="card h-100">
   <div class="card-body">
-    <i class="fab fa-cc-visa"></i>
-    <a href="#" class="card-link" [routerLink]="['/deposits-detail']" [state]="{ product: product}">Ver Detalle</a>
+    <div class="row">
+      <div class="col-5"><img [src]="product.id | creditcardicon" alt="..."></div>
+      <div class="col-5 offset-2">
+        <a href="#" class="card-link" [routerLink]="['/deposits-detail']" [state]="{ product: product}">Ver Detalle</a>
+      </div>
+    </div>
     <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id | creditCard}}</h6>
     <p class="card-text">

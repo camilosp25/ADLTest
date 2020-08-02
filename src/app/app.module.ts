@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { CurrentsDetailComponent } from './components/currents-detail/currents-d
 import { DepositsDetailComponent } from './components/deposits-detail/deposits-detail.component';
 import { CreditsDetailComponent } from './components/credits-detail/credits-detail.component';
 import { CreditCardPipe } from './pipes/credit-card.pipe';
+import { CreditcardiconPipe } from './pipes/creditcardicon.pipe';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { CreditCardPipe } from './pipes/credit-card.pipe';
     CurrentsDetailComponent,
     DepositsDetailComponent,
     CreditsDetailComponent,
-    CreditCardPipe
+    CreditCardPipe,
+    CreditcardiconPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
