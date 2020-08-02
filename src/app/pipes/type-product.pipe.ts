@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TypeProductPipe implements PipeTransform {
 
-  typeProducts: any = {CERTIFIED_DEPOSIT_TERM : 'CDT',
+  typeProducts: object = {CERTIFIED_DEPOSIT_TERM : 'CDT',
     CREDIT_CARD : 'Tarjeta de Crédito',
     CREDIT: 'Crédito',
     CURRENT_ACCOUNT: 'Cuenta Corriente',

@@ -1,0 +1,14 @@
+<div class="card h-100">
+  <div class="card-body">
+    <i class="fab fa-cc-visa"></i>
+    <a href="#" class="card-link" [routerLink]="['/deposits-detail']" [state]="{ product: product}">Ver Detalle</a>
+    <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id | creditCard}}</h6>
+    <p class="card-text">
+      Cupo disponible: {{product.productAccountBalances.cupo_disponible_compras_pesos.amount | currency: product.productAccountBalances.cupo_disponible_compras_pesos.currencyCode: 'symbol-narrow': '.2-2'}}
+    </p>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%': balancePercentage}" [attr.aria-valuenow]="balancePercentage" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+</div>

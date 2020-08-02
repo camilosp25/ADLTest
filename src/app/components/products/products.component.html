@@ -4,14 +4,12 @@
 </div>
 <div class="row row-cols-1 row-cols-md-4">
   <div class="col mb-4" *ngFor="let product of filteredProducts">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id}}</h6>
-        <p class="card-text" *ngIf="product.typeAccount == 'CURRENT_ACCOUNT' || product.typeAccount == 'DEPOSIT_ACCOUNT'">
-          Saldo disponible: {{product.productAccountBalances.saldo_disponible.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}
-        </p>
-      </div>
+    <div class="col-12" [ngSwitch]="product.typeAccount">
+      <app-deposits *ngSwitchCase="'DEPOSIT_ACCOUNT'" [product]="product"></app-deposits>
+      <app-currents *ngSwitchCase="'CURRENT_ACCOUNT'"></app-currents>
+      <app-creditcards *ngSwitchCase="'CREDIT_CARD'" [product]="product"></app-creditcards>
+      <app-credits *ngSwitchCase="'CREDIT'"></app-credits>
+      <app-cdts *ngSwitchCase="'CERTIFIED_DEPOSIT_TERM'"></app-cdts>
     </div>
   </div>
 </div>

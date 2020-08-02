@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductsService} from '../../services/products.service';
 import {Products} from '../../interface/products';
-import {map} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -14,14 +14,14 @@ export class ProductsComponent implements OnInit {
   filteredProducts: Products[] = [];
   otherBankProducts = false;
 
-  constructor(private productsServices: ProductsService) { }
+  constructor(private productsServices: ProductsService, private router: Router) { }
 
   ngOnInit() {
     this.productsServices.getProducts().subscribe(
       resp => {
+        debugger;
         this.products = resp;
-        this.filteredProducts = this.products.sort((a, b) => a.typeAccount.localeCompare(b.typeAccount))
-          .filter((data: Products) => data.accountInformation.bank === 'BANCO_1');
+        this.onlyBankProducts();
       });
   }
 
@@ -30,9 +30,13 @@ export class ProductsComponent implements OnInit {
     if (this.otherBankProducts) {
       this.filteredProducts = this.products;
     } else {
-      this.filteredProducts = this.products.sort((a, b) => a.typeAccount.localeCompare(b.typeAccount))
-        .filter((data: Products) => data.accountInformation.bank === 'BANCO_1');
+      this.onlyBankProducts();
     }
+  }
+
+  onlyBankProducts() {
+    this.filteredProducts = this.products.sort((a, b) => a.typeAccount.localeCompare(b.typeAccount))
+      .filter((data: Products) => data.accountInformation.bank === 'BANCO_1');
   }
 
 }
