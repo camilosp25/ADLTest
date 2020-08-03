@@ -15,17 +15,17 @@
             <div class="col mb-4" *ngFor="let product of products">
               <div class="card">
                 <div class="card-body">
-                  <a href="#" class="card-link" [routerLink]="['/cdts-detail']" [state]="{ product: product}">Ver Detalle</a>
-                  <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+                  <a href="#" class="card-link" [routerLink]="['/cdts-detail']" [state]="{ product: product}">{{'SeeDetail' | translate}}</a>
+                  <h5 class="card-title">{{product.typeAccount | translate}}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id}}</h6>
                   <p class="card-text">
-                    Valor invertido: {{product.productAccountBalances.valor_constitucion.amount | currency: product.currencyCode: 'symbol-narrow': '.2-2'}}
+                    {{'InvestedValue' | translate}}: {{product.productAccountBalances.valor_constitucion.amount | currency: product.currencyCode: 'symbol-narrow': '.2-2'}}
                   </p>
                   <p class="card-text">
-                    Plazo: {{product.term.count}} días
+                    {{'Term' | translate}}: {{product.term.count}} {{'Days' | translate}}
                   </p>
                   <p class="card-text">
-                    Fecha de vencimiento: {{stringToDate(product.dueDate) | date:'shortDate'}}
+                    {{'DueDate' | translate}}: {{stringToDate(product.dueDate) | date:'shortDate'}}
                   </p>
                 </div>
               </div>

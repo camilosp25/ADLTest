@@ -1,5 +1,19 @@
 {
   "showOtherBank" : "Show other banks products",
   "SavingsAccountLabel" : "Savings account",
-  "Days" : "Days"
+  "Days" : "Days",
+  "CheckingAccountsLabel" : "Checking accounts",
+  "CreditCardsLabel" : "Credit Cards",
+  "SeeDetail" : "See Detail",
+  "InvestedValue" : "Invested value",
+  "Term" : "Term",
+  "DueDate" : "Due date",
+  "AvailableSpace" : "Available space",
+  "AvailableBalance" : "Available balance",
+  "DEPOSIT_ACCOUNT" : "Saving account",
+  "CURRENT_ACCOUNT" : "Checking account",
+  "CREDIT" : "Credit",
+  "CREDIT_CARD" : "Credit card",
+  "CERTIFIED_DEPOSIT_TERM" : "CDT",
+  "Back" : "Back"
 }

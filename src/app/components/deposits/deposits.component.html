@@ -15,11 +15,11 @@
             <div class="col mb-4" *ngFor="let product of products">
               <div class="card">
                 <div class="card-body">
-                  <a href="#" class="card-link" [routerLink]="['/deposits-detail']" [state]="{ product: product}">Ver Detalle</a>
-                  <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+                  <a href="#" class="card-link" [routerLink]="['/deposits-detail']" [state]="{ product: product}">{{'SeeDetail' | translate}}</a>
+                  <h5 class="card-title">{{product.typeAccount | translate}}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id}}</h6>
                   <p class="card-text">
-                    Saldo disponible: {{product.productAccountBalances.saldo_disponible.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}
+                    {{'AvailableBalance' | translate}}: {{product.productAccountBalances.saldo_disponible.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}
                   </p>
                 </div>
               </div>

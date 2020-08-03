@@ -4,7 +4,7 @@
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
           <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCreditCards" aria-expanded="true" aria-controls="collapseOne">
-            Tarjetas de Crédito ({{products.length}})
+            {{'CreditCardsLabel' | translate}} ({{products.length}})
           </button>
         </h2>
       </div>
@@ -18,13 +18,13 @@
                   <div class="row">
                     <div class="col-5"><img [src]="product.id | creditcardicon" alt="..."></div>
                     <div class="col-5 offset-2">
-                      <a href="#" class="card-link" [routerLink]="['/creditcards-detail']" [state]="{ product: product}">Ver Detalle</a>
+                      <a href="#" class="card-link" [routerLink]="['/creditcards-detail']" [state]="{ product: product}">{{'SeeDetail' | translate}}</a>
                     </div>
                   </div>
-                  <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+                  <h5 class="card-title">{{product.typeAccount | translate}}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id | creditCard}}</h6>
                   <p class="card-text">
-                    Cupo disponible: {{product.productAccountBalances.cupo_disponible_compras_pesos.amount | currency: product.productAccountBalances.cupo_disponible_compras_pesos.currencyCode: 'symbol-narrow': '.2-2'}}
+                    {{'AvailableSpace' | translate}}: {{product.productAccountBalances.cupo_disponible_compras_pesos.amount | currency: product.productAccountBalances.cupo_disponible_compras_pesos.currencyCode: 'symbol-narrow': '.2-2'}}
                   </p>
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%': getBalancePercentage(product)}" [attr.aria-valuenow]="getBalancePercentage(product)" aria-valuemin="0" aria-valuemax="100"></div>

@@ -4,7 +4,7 @@
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
           <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCurrents" aria-expanded="true" aria-controls="collapseOne">
-            Cuentas Corriente ({{products.length}})
+            {{'CheckingAccountsLabel' | translate}} ({{products.length}})
           </button>
         </h2>
       </div>
@@ -16,7 +16,7 @@
               <div class="card">
                 <div class="card-body">
                   <a href="#" class="card-link" [routerLink]="['/currents-detail']" [state]="{ product: product}">Ver Detalle</a>
-                  <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+                  <h5 class="card-title">{{product.typeAccount | translate}}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id}}</h6>
                   <p class="card-text">
                     Saldo disponible: {{product.productAccountBalances.saldo_disponible.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}

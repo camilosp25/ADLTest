@@ -16,7 +16,7 @@
               <div class="card">
                 <div class="card-body">
                   <a href="#" class="card-link" [routerLink]="['/credits-detail']" [state]="{ product: product}">Ver Detalle</a>
-                  <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+                  <h5 class="card-title">{{product.typeAccount | translate}}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id}}</h6>
                   <p class="card-text">
                     Te queda por pagar: {{product.productAccountBalances.pago_total_pesos.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}

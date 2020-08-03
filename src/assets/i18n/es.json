@@ -1,5 +1,19 @@
 {
   "showOtherBank" : "Mostrar productos de otros bancos",
   "SavingsAccountLabel" : "Cuentas de ahorros",
-  "Days": "Días"
+  "Days": "Días",
+  "CheckingAccountsLabel" : "Cuentas corriente",
+  "CreditCardsLabel" : "Tarjetas de Crédito",
+  "SeeDetail" : "Ver Detalle",
+  "InvestedValue" : "Valor invertido",
+  "Term" : "Plazo",
+  "DueDate" : "Fecha de vencimiento",
+  "AvailableSpace" : "Cupo disponible",
+  "AvailableBalance" : "Saldo disponible",
+  "DEPOSIT_ACCOUNT" : "Cuenta de ahorros",
+  "CURRENT_ACCOUNT" : "Cuenta corriente",
+  "CREDIT" : "Crédito",
+  "CREDIT_CARD" : "Tarjeta de Crédito",
+  "CERTIFIED_DEPOSIT_TERM" : "CDT",
+  "Back" : "Regresar"
 }

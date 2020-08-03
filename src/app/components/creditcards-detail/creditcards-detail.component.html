@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row mt-4">
-    <a [routerLink]="['/products']" class="btn btn-outline-danger">Regresar</a>
+    <a [routerLink]="['/products']" class="btn btn-outline-danger">{{'Back' | translate}}</a>
   </div>
   <div class="row mt-4">
     <div class="col-5"><img [src]="product.id | creditcardicon" alt="..."></div>
   </div>
   <div class="row mt-4">
-    <div class="col-5 bg-dark rounded-pill text-white p-2"><label class="col-form-label">{{product.typeAccount | typeProduct}}</label></div>
+    <div class="col-5 bg-dark rounded-pill text-white p-2"><label class="col-form-label">{{product.typeAccount | translate}}</label></div>
   </div>
   <div class="row">
     <div class="col-5"><h4><label class="col-form-label">Nro.</label></h4></div>

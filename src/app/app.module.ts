@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import { TypeProductPipe } from './pipes/type-product.pipe';
 import { CreditsComponent } from './components/credits/credits.component';
 import { DepositsComponent } from './components/deposits/deposits.component';
 import { CurrentsComponent } from './components/currents/currents.component';
@@ -27,7 +26,6 @@ import { TranslationComponent } from './translation/translation.component';
   declarations: [
     AppComponent,
     ProductsComponent,
-    TypeProductPipe,
     CreditsComponent,
     DepositsComponent,
     CurrentsComponent,
