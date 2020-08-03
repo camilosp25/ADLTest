@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {Products} from '../../interface/products';
 
 @Component({
   selector: 'app-cdts-detail',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CdtsDetailComponent implements OnInit {
 
-  constructor() { }
+  product: Products;
+
+  constructor(private router: Router) {
+    this.product = this.router.getCurrentNavigation().extras.state.product as Products;
+  }
 
   ngOnInit() {
   }

@@ -47,6 +47,10 @@
     currencyCode: string;
   }
 
+  export interface ValorCuota {
+    amount: number;
+  }
+
   export interface CupoDisponibleAvancesPesos {
     amount: number;
     currencyCode: string;
@@ -121,6 +125,7 @@
     intereses_causados: InteresesCausados;
     retefuente: Retefuente;
     pago_total_pesos: PagoTotalPesos;
+    valor_cuota: ValorCuota;
     cupo_disponible_avances_pesos: CupoDisponibleAvancesPesos;
     saldo_mora_pesos: SaldoMoraPesos;
     saldo_actual: SaldoActual;
@@ -153,4 +158,5 @@
     capacity?: number;
     status: string;
     overDraftDays?: number;
+    currencyCode?: string;
   }

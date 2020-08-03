@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Products} from '../../interface/products';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-creditcards-detail',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditcardsDetailComponent implements OnInit {
 
-  constructor() { }
+  product: Products;
+
+  constructor(private router: Router) {
+    this.product = this.router.getCurrentNavigation().extras.state.product as Products;
+  }
 
   ngOnInit() {
   }

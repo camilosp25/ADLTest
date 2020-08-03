@@ -1,0 +1,32 @@
+<div class="row-cols-12 mt-4" *ngIf="products.length > 0">
+  <div class="accordion" id="accordionCredits">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseCredits" aria-expanded="true" aria-controls="collapseOne">
+            Créditos ({{products.length}})
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseCredits" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCredits">
+        <div class="card-body">
+          <div class="row row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+            <div class="col mb-4" *ngFor="let product of products">
+              <div class="card">
+                <div class="card-body">
+                  <a href="#" class="card-link" [routerLink]="['/credits-detail']" [state]="{ product: product}">Ver Detalle</a>
+                  <h5 class="card-title">{{product.typeAccount | typeProduct}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Nro. {{product.id}}</h6>
+                  <p class="card-text">
+                    Te queda por pagar: {{product.productAccountBalances.pago_total_pesos.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

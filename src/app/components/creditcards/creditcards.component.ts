@@ -8,16 +8,17 @@ import {Products} from '../../interface/products';
 })
 export class CreditcardsComponent implements OnInit {
 
-  @Input() product: Products;
-  balancePercentage: number;
+  @Input() products: Products[];
 
   constructor() {
   }
 
   ngOnInit() {
-    debugger;
-    this.balancePercentage = (this.product.productAccountBalances.pago_total_pesos.amount * 100) /
-      this.product.productAccountBalances.cupo_total.amount;
+  }
+
+  getBalancePercentage(product: Products) {
+    return (product.productAccountBalances.pago_total_pesos.amount * 100) /
+      product.productAccountBalances.cupo_total.amount;
   }
 
 }

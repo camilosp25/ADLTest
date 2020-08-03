@@ -1,1 +1,31 @@
-<p>creditcards-detail works!</p>
+<div class="container">
+  <div class="row mt-4">
+    <a [routerLink]="['/products']" class="btn btn-outline-danger">Regresar</a>
+  </div>
+  <div class="row mt-4">
+    <div class="col-5"><img [src]="product.id | creditcardicon" alt="..."></div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-5 bg-dark rounded-pill text-white p-2"><label class="col-form-label">{{product.typeAccount | typeProduct}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Nro.</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.id | creditCard}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Cupo total</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.productAccountBalances.cupo_total.amount | currency: product.productAccountBalances.cupo_total.currencyCode: 'symbol-narrow': '.2-2'}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Cupo disponible</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.productAccountBalances.cupo_disponible_compras_pesos.amount | currency: product.productAccountBalances.cupo_disponible_compras_pesos.currencyCode: 'symbol-narrow': '.2-2'}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Pago total</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.productAccountBalances.pago_total_pesos.amount | currency: product.productAccountBalances.pago_total_pesos.currencyCode: 'symbol-narrow': '.2-2'}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Pago mínimo</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.productAccountBalances.valor_pago_minimo.amount | currency: product.productAccountBalances.valor_pago_minimo.currencyCode: 'symbol-narrow': '.2-2'}}</label></div>
+  </div>
+</div>

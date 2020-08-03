@@ -8,11 +8,15 @@ import {Products} from '../../interface/products';
 })
 export class CdtsComponent implements OnInit {
 
-  @Input() product: Products;
+  @Input() products: Products[];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  stringToDate(date) {
+    return new Date(date.split(' ').join(''));
   }
 
 }

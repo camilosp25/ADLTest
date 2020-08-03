@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { TypeProductPipe } from './pipes/type-product.pipe';
 import { CreditsComponent } from './components/credits/credits.component';
 import { DepositsComponent } from './components/deposits/deposits.component';
@@ -19,6 +21,7 @@ import { DepositsDetailComponent } from './components/deposits-detail/deposits-d
 import { CreditsDetailComponent } from './components/credits-detail/credits-detail.component';
 import { CreditCardPipe } from './pipes/credit-card.pipe';
 import { CreditcardiconPipe } from './pipes/creditcardicon.pipe';
+import { TranslationComponent } from './translation/translation.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +39,22 @@ import { CreditcardiconPipe } from './pipes/creditcardicon.pipe';
     DepositsDetailComponent,
     CreditsDetailComponent,
     CreditCardPipe,
-    CreditcardiconPipe
+    CreditcardiconPipe,
+    TranslationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => {
+          return new TranslateHttpLoader(http);
+        },
+        deps: [ HttpClient ]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

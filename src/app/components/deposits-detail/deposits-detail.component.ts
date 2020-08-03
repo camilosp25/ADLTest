@@ -12,8 +12,8 @@ export class DepositsDetailComponent implements OnInit {
   product: Products;
 
   constructor(private router: Router) {
+    //debugger;
     this.product = this.router.getCurrentNavigation().extras.state.product as Products;
-    console.log(this.product);
   }
 
   ngOnInit() {

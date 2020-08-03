@@ -19,7 +19,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.productsServices.getProducts().subscribe(
       resp => {
-        debugger;
+        //debugger;
         this.products = resp;
         this.onlyBankProducts();
       });
@@ -37,6 +37,10 @@ export class ProductsComponent implements OnInit {
   onlyBankProducts() {
     this.filteredProducts = this.products.sort((a, b) => a.typeAccount.localeCompare(b.typeAccount))
       .filter((data: Products) => data.accountInformation.bank === 'BANCO_1');
+  }
+
+  filterByType(typeAccount: string) {
+    return this.filteredProducts.filter((data: Products) => data.typeAccount === typeAccount);
   }
 
 }

@@ -11,6 +11,7 @@
     "id": "4544769920667610",
     "typeAccount": "CREDIT_CARD",
     "dueDate": "2019-12-26T00: 00: 00",
+    "currencyCode": "COP",
     "productAccountBalances": {
       "pago_total_pesos": {
         "amount": 1000000,
@@ -259,11 +260,23 @@
     "accountInformation": {
       "accountIdentifier": "1315000180",
       "productType": "CREDIT",
-      "bank": "BANCO_2"
+      "bank": "BANCO_2",
+      "currencyCode": "COP"
     },
     "locked": true,
     "id": "1315000180",
-    "typeAccount": "CREDIT"
+    "typeAccount": "CREDIT",
+    "productAccountBalances": {
+      "pago_total_pesos": {
+        "amount": 105968
+      },
+      "saldo_mora_pesos": {
+        "amount": 5000
+      },
+      "valor_cuota": {
+        "amount": 105968
+      }
+    }
   },
   {
     "accountInformation": {
@@ -275,6 +288,7 @@
     "id": "5201897302970640",
     "typeAccount": "CREDIT_CARD",
     "dueDate": "2019-12-05T00: 00: 00",
+    "currencyCode": "COP",
     "productAccountBalances": {
       "pago_total_pesos": {
         "amount": 105968,

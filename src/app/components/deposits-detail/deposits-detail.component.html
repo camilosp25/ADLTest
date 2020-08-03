@@ -1,2 +1,20 @@
-<p>deposits-detail works!</p>
-{{product.typeAccount}}
+<div class="container">
+  <div class="row mt-4">
+    <a [routerLink]="['/products']" class="btn btn-outline-danger">Regresar</a>
+  </div>
+  <div class="row mt-4">
+    <div class="bg-dark rounded-pill text-white"><label class="col-form-label">{{product.typeAccount | typeProduct}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Nro.</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.id}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Saldo disponible</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.productAccountBalances.saldo_disponible.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}</label></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><h4><label class="col-form-label">Saldo en canje</label></h4></div>
+    <div class="col-5"><label class="col-form-label text-secondary">{{product.productAccountBalances.saldo_canje.amount | currency: product.accountInformation.currencyCode: 'symbol-narrow': '.2-2'}}</label></div>
+  </div>
+</div>

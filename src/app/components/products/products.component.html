@@ -1,15 +1,9 @@
-<div class="custom-control custom-switch" (click)="otherBankProducts = !otherBankProducts; toogleOtherBankProducts($event)">
+<div class="row custom-control custom-switch mt-4" (click)="otherBankProducts = !otherBankProducts; toogleOtherBankProducts($event)">
   <input type="checkbox" class="custom-control-input" id="customSwitches" [checked]="otherBankProducts">
-  <label class="custom-control-label" for="customSwitches">Mostrar productos de otros bancos</label>
+  <label class="custom-control-label" for="customSwitches">{{'showOtherBank' | translate}}</label>
 </div>
-<div class="row row-cols-1 row-cols-md-4">
-  <div class="col mb-4" *ngFor="let product of filteredProducts">
-    <div class="col-12" [ngSwitch]="product.typeAccount">
-      <app-deposits *ngSwitchCase="'DEPOSIT_ACCOUNT'" [product]="product"></app-deposits>
-      <app-currents *ngSwitchCase="'CURRENT_ACCOUNT'"></app-currents>
-      <app-creditcards *ngSwitchCase="'CREDIT_CARD'" [product]="product"></app-creditcards>
-      <app-credits *ngSwitchCase="'CREDIT'"></app-credits>
-      <app-cdts *ngSwitchCase="'CERTIFIED_DEPOSIT_TERM'"></app-cdts>
-    </div>
-  </div>
-</div>
+<app-deposits [products]="filterByType('DEPOSIT_ACCOUNT')"></app-deposits>
+<app-currents [products]="filterByType('CURRENT_ACCOUNT')"></app-currents>
+<app-creditcards [products]="filterByType('CREDIT_CARD')"></app-creditcards>
+<app-credits [products]="filterByType('CREDIT')"></app-credits>
+<app-cdts [products]="filterByType('CERTIFIED_DEPOSIT_TERM')"></app-cdts>

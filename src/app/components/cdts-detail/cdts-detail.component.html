@@ -1,1 +1,22 @@
-<p>cdts-detail works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-5"><label class="col-form-label">Nro.</label></div>
+    <div class="col-5">{{product.id}}></div>
+  </div>
+  <div class="row">
+    <div class="col-5"><label class="col-form-label">Valor invertido</label></div>
+    <div class="col-5">{{product.productAccountBalances.valor_constitucion.amount | currency: product.currencyCode: 'symbol-narrow': '.2-2'}}</div>
+  </div>
+  <div class="row">
+    <div class="col-5"><label class="col-form-label">Tasa nominal</label></div>
+    <div class="col-5">{{product.productAccountBalances.tasa_nominal.rate | percent}}</div>
+  </div>
+  <div class="row">
+    <div class="col-5"><label class="col-form-label">Intereses causados</label></div>
+    <div class="col-5">{{product.productAccountBalances.intereses_causados.amount | currency: product.currencyCode: 'symbol-narrow': '.2-2'}}</div>
+  </div>
+  <div class="row">
+    <div class="col-5"><label class="col-form-label">Intereses pagados</label></div>
+    <div class="col-5">{{product.productAccountBalances.interes_pagado.amount | currency: product.currencyCode: 'symbol-narrow': '.2-2'}}</div>
+  </div>
+</div>

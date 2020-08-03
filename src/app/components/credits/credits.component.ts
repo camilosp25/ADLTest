@@ -8,7 +8,7 @@ import {Products} from '../../interface/products';
 })
 export class CreditsComponent implements OnInit {
 
-  @Input() product: Products;
+  @Input() products: Products[];
 
   constructor() { }
 
